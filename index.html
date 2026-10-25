@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LogicLab | Circuit Simulator</title>
+    </head>
+    <body>
+        <header class="topBar">
+            <div class="brand">
+                <span class="brandIcon">JP</span>
+                <div>
+                    <h1>LogicLab</h1>
+                    <p>Build. Connect. Understand.</p>
+                </div>
+            </div>
+
+            <div class="headerActions">
+                <span id="simulationStatus">Simulation Ready</span>
+                <button id="clearButton" class="secondaryButton">Clear Circuit</button>
+            </div>
+        </header>
+
+        <main class="workspace">
+            <aside class="toolbox">
+                <h2>Components</h2>
+                <p class="sectionDescription">Choose a compenent to add it your circuit</p>
+                <div class="componentGroup">
+                    <h3>Inputs and outputs</h3>
+                    <button class="componentButton" data-component="INPUT">+ Input switch</button>
+                    <button class="compenentButton" data-component="OUTPUT">+ Output switch</button>
+                </div>
+
+                <div class="componentGroup">
+                    <h3>Logic Gates</h3>
+                    <button class="compenentButton" data-component="AND"> + AND gate</button>
+                    <button class="compenentButton" data-component="OR"> + OR gate</button>
+                    <button class="componentButton" data-component="NOT"> + NOT gate</button>
+                    <button class="compenentButton" data-component="XOR"> + XOR gate</button>
+                    <button class="compenentButton" data-component="NAND"> + NAND gate</button>
+                    <button class="componentButton" data-component="NOR"> + NOR gate</button>
+                </div>
+
+                <div class="componentGroup">
+                    <h3>Editing</h3>
+                    <p class=""helpText">Click a component to select it. Use the controls on the right to edit it.</p>
+                </div>
+            </aside>
+
+            <section class="editorSection">
+                <div class="editorHeader">
+                    <div>
+                        <h2>Circuit workspace</h2>
+                        <p>Design your digital logic circuit.</p>
+                    </div>
+
+                    <button id="truthTableButton" class="primaryButton">Generate a truth table</button>
+                </div>
+
+                <div class="circuitCanvas" id="circuitCanvas">
+                    <div id="emptyMessage" class="emptyMessage">
+                        <h3>Your workspace is empty</h3>
+                        <p>Add an input, a gate, or an output to get started.</p>
+                    </div>
+                </div>
+
+                <section class="truthTableSection">
+                    <div class="sectionHeading">
+                        <div>
+                            <h2>Truth Table</h2>
+                            <p>Test every possible input combination</p>
+                        </div>
+                    </div>
+
+                    <div id="truthTableContainer" class="tableContainer">
+                        <p class="emptyTableMessage">Your truth table will appear here</p>
+                    </div>
+                </section>
+            </section>
+
+            <aside class="propertiesPanel">
+                <h2>Properties</h2>
+                <p class="sectionDescription">Select a component to see its settings</p>
+                <div id="propertiesContent" class="propertiesContent">
+                    <p class="helpText">Nothing selected yet. Click a component in the workspace</p>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <p>LogicLab - Made by a teenager!</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

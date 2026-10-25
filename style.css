@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --pageBackground: #10171d;
+    --panelBackground: #18232c;
+    --canvasBackground: #101a22;
+    --borderColor: #2c3b47;
+    --mainText: #edf4f7;
+    --accentColor: #72e3b0;
+    --buttonText: #10251d;
+    --mutedText: #9aabb7;
+}
+
+body {
+    margin: 0;
+    background: var(--mainText);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.topBar {
+    min-height: 86px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid var(--borderColor);
+    background: var(--panelBackground);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brandIcon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: var(--accentColor);
+    color: var(--buttonText);
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.brand h1,
+.brand p,
+.editorHeader h2,
+.editorHeader p,
+.sectionHeading h2,
+.sectionHeading p {
+    margin: 0;
+}
+
+.brand h1 {
+    font-size: 22px;
+}
+
+.brand p,
+.editorHeader p,
+.sectionHeading p,
+.sectionDescription {
+    color: var(--mutedText);
+    font-size: 13px;
+}
+
+.brand p {
+    margin-top: 4px;
+}
+
+.headerActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--accentColor);
+    font-size: 13px;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) 230px;
+    gap: 16px;
+    padding: 20px;
+    align-items: start;
+}
+
+.toolbox,
+.propertiesPanel {
+    background: var(--panelBackground);
+    border: 1px solid var(--borderColor);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.toolbox h2,
+.propertiesPanel h2 {
+    font-size: 17px;
+    margin: 0;
+}
+
+.sectionDescription {
+    line-height: 1.6;
+    margin: 8px 0 20px;
+}
