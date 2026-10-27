@@ -112,3 +112,164 @@ button {
     line-height: 1.6;
     margin: 8px 0 20px;
 }
+
+.componentGroup {
+    border-top: 1px solid var(--borderColor);
+    padding: 16px 0;
+}
+
+.componentGroup h3 {
+    font-size: 12px;
+    color: var(--mutedText);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin: 0 0 12px;
+}
+
+.componentButton {
+    width: 100%;
+    text-align: left;
+    background: #202e38;
+    color: var(--mainText);
+    border: 1px solid #344550;
+    border-radius: 7px;
+    padding: 10px;
+    margin-bottom: 8px;
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.componentButton:hover {
+    border-color: var(--accentColor);
+    background: #263a43;
+}
+
+.editorSection {
+    min-width: 0;
+}
+
+.editorHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.editorHeader h2,
+.sectionHeading h2 {
+    font-size: 19px;
+}
+
+.editorHeader p,
+.sectionHeading p {
+    margin-top: 6px;
+}
+
+.primaryButton, 
+.secondaryButton {
+    border-radius: 7px;
+    padding: 10px 13px;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+.primaryButton:hover {
+    background: #91edc4;
+}
+
+.secondaryButton {
+    background: #263640;
+    border-color: #3a4c57;
+    color: var(--mainText);
+}
+
+.circuitCanvas {
+    position: relative;
+    min-height: 430px;
+    overflow: auto;
+    border: 1px solid var(--borderColor);
+    border-radius: 12px;
+    background-color: var(--canvasBackground);
+    background-image: linear-gradient(#263541 1px, transparent 1px), linear-gradient(90deg, #263541 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.emptyMessage {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    pointer-events: none;
+}
+
+.emptyMessage h3 {
+    margin-bottom: 0;
+}
+
+.emptyMessage p,
+.helpText, .emptyTableMessage {
+    color: var(--mutedText);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.truthTableSection {
+    margin-top: 22px;
+    padding: 18px;
+    border: 1px solid var(--borderColor);
+    border-radius: 12px;
+    background: var(--panelBackground);
+}
+
+.sectionHeading {
+    margin-bottom: 16px;
+}
+
+.tableContainer {
+    overflow-x: auto;
+}
+
+.propertiesContent {
+    min-height: 100px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 18px;
+    border-top: 1px solid var(--borderColor);
+    color: var(--mutedText);
+    font-size: 12px;
+}
+
+@media (max-width: 1050) {
+    .workspace {
+        grid-template-columns: 190px minmax(0, 1fr);
+    }
+    .propertiesPanel {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 650px) {
+    .topBar,
+    .headerActions,
+    .editorHeader {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .workspace {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 12px;
+    }
+    .propertiesPanel {
+        grid-column: auto;
+    }
+    .circuitCanvas {
+        min-height: 350px;
+    }
+}
